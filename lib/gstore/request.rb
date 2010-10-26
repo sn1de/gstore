@@ -93,7 +93,7 @@ module GStore
                     
           response = http.request(req, data)
 
-          return method == Net::HTTP::Head ? response.header : response.body
+          return response, method == Net::HTTP::Head ? response.header : response.body
         end
       end
       
